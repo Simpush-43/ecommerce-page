@@ -1,4 +1,4 @@
-# Jamstack ECommerce
+# ECommerce-Page
 
 A fast, fully configurable storefront built with **Next.js** and **Tailwind CSS**. Ships with static inventory out of the box — swap in any backend (Shopify, Contentful, custom API) by changing a single provider file.
 
