@@ -60,19 +60,19 @@ const Cart = ({ context }) => {
                       return (
                         <div className="border-b py-10" key={item.id}>
                           <div className="flex items-center hidden md:flex">
-                            <Link href={`/product/${slugify(item.name)}`}>
-                              <a aria-label={item.name}>
-                                <Image className="w-32 m-0" src={item.image} alt={item.name} />
-                              </a>
+                            <Link href={`/product/${slugify(item.name)}`} aria-label={item.name}>
+
+                              <Image className="w-32 m-0" src={item.image} alt={item.name} />
+
                             </Link>
-                            <Link href={`/product/${slugify(item.name)}`}>
-                              <a aria-label={item.name}>
-                                <p className="
-                                m-0 pl-10 text-gray-600 w-60
-                                ">
-                                  {item.name}
-                                </p>
-                              </a>
+                            <Link href={`/product/${slugify(item.name)}`} aria-label={item.name}>
+
+                              <p className="
+                              m-0 pl-10 text-gray-600 w-60
+                              ">
+                                {item.name}
+                              </p>
+
                             </Link>
                             <div className="ml-4">
                               <QuantityPicker
@@ -92,22 +92,21 @@ const Cart = ({ context }) => {
                               <FaTimes />
                             </div>
                           </div>
-
                           <div className="flex items-center flex md:hidden">
                             <Link href={`/product/${slugify(item.name)}`}>
-                              <a>
-                                <Image className="w-32 m-0" src={item.image} alt={item.name} />
-                              </a>
+
+                              <Image className="w-32 m-0" src={item.image} alt={item.name} />
+
                             </Link>
                             <div>
-                              <Link href={`/product/${slugify(item.name)}`}>
-                                <a aria-label={item.name}>
-                                  <p className="
-                                  m-0 pl-6 text-gray-600 text-base
-                                  ">
-                                    {item.name}
-                                  </p>
-                                </a>
+                              <Link href={`/product/${slugify(item.name)}`} aria-label={item.name}>
+
+                                <p className="
+                                m-0 pl-6 text-gray-600 text-base
+                                ">
+                                  {item.name}
+                                </p>
+
                               </Link>
                               <div className="ml-6 mt-4 mb-2">
                                 <QuantityPicker
@@ -130,7 +129,7 @@ const Cart = ({ context }) => {
                             </div>
                           </div>
                         </div>
-                      )
+                      );
                     })
                   }
                 </div>  
@@ -142,19 +141,22 @@ const Cart = ({ context }) => {
             <p className="font-semibold tracking-wide">{DENOMINATION + total}</p>
           </div>
           {!cartEmpty && (
-            <Link href="/checkout" className="flex flex-1 justify-end">
-              <a aria-label="Check out">
-                <div className="cursor-pointer flex items-center">
-                  <p className="text-gray-600 text-sm mr-2">Proceed to check out</p>
-                  <FaLongArrowAltRight className="text-gray-600" />
-                </div>
-              </a>
+            <Link
+              href="/checkout"
+              className="flex flex-1 justify-end"
+              aria-label="Check out">
+
+              <div className="cursor-pointer flex items-center">
+                <p className="text-gray-600 text-sm mr-2">Proceed to check out</p>
+                <FaLongArrowAltRight className="text-gray-600" />
+              </div>
+
             </Link>
           )}
         </div>
       </div>
     </>
-  )
+  );
 }
 
 function CartWithContext(props) {
